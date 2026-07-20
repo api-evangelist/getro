@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.getro.com/
+docs: https://developers.getro.com/
+description: >-
+  The Getro Network API (v2) authenticates every request with a static API key
+  presented as an HTTP Bearer token. API keys are generated in the Getro admin
+  portal (getro.com/app, now hosted at getro.findem.ai) and a developer key can
+  be requested from help@getro.com. There is no OAuth, no OpenID Connect, and no
+  per-scope authorization surface — a single account-scoped key grants access to
+  that account's networks, companies, jobs and contacts. Browser (CORS) requests
+  are explicitly not supported; the key must be used server-side.
+summary:
+  types:
+  - http
+  http_scheme: bearer
+  api_key_in: []
+  oauth2_flows: []
+schemes:
+- name: bearerApiKey
+  type: http
+  scheme: bearer
+  description: >-
+    Send the API key in the Authorization header as `Authorization: Bearer API_KEY`.
+    Keys are account-scoped and issued from the Getro admin portal.
+  in: header
+  header: Authorization
+  format: 'Bearer <API_KEY>'
+  sources:
+  - https://developers.getro.com/
+notes:
+  - Rate limited to 30 requests per minute (see rate-limits/getro-rate-limits.yml).
+  - CORS is not supported; requests must originate server-side.
+  - Request a developer key via help@getro.com.
