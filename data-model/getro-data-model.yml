@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.getro.com/
+description: >-
+  Entity model for the Getro Network API v2, captured from the documented
+  resource surface (no OpenAPI is published). A Network is the top-level tenant;
+  Companies, Jobs and Contacts belong to a Network. Job Functions, Industry Tags
+  and Locations are shared reference/lookup collections used to classify and
+  filter companies and jobs.
+entities:
+  - name: Network
+    description: Top-level tenant (a VC/community talent network). Scopes all companies, jobs and contacts.
+    path: /v2/networks
+  - name: Company
+    description: An organization within a network.
+    path: /v2/networks/:id/companies
+    relationships:
+      - type: belongs_to
+        target: Network
+        via: network_id
+  - name: Job
+    description: A job opening posted by a company within a network. Supports a "removed" collection.
+    path: /v2/networks/:id/jobs
+    relationships:
+      - type: belongs_to
+        target: Network
+        via: network_id
+      - type: belongs_to
+        target: Company
+        via: company
+  - name: Contact
+    description: A person/contact within a network; supports notes and import.
+    path: /v2/networks/:id/contacts
+    relationships:
+      - type: belongs_to
+        target: Network
+        via: network_id
+  - name: JobFunction
+    description: Shared reference list used to classify and filter jobs.
+    path: /v2/job_functions
+    reference: true
+  - name: IndustryTag
+    description: Shared reference list used to classify and filter companies.
+    path: /v2/industry_tags
+    reference: true
+  - name: Location
+    description: Shared location reference for companies (/locations/companies) and jobs (/locations/jobs).
+    path: /v2/locations
+    reference: true

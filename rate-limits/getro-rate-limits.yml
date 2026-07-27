@@ -1,0 +1,29 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+generated: '2026-07-19'
+method: searched
+source: https://developers.getro.com/
+provider: Getro
+providerId: getro
+created: '2026-07-19'
+modified: '2026-07-19'
+tags:
+  - Rate Limiting
+  - Jobs
+  - Talent
+description: >-
+  The Getro Network API is rate limited to 30 requests per minute per API key.
+  Getro's published guidance recommends paging through all jobs and company data
+  for a network once every 6 hours and spreading requests evenly rather than
+  repeating identical requests within that window. Limits are flat (not tiered)
+  and are documented on the developer portal.
+docs: https://developers.getro.com/
+limits:
+  - name: All requests
+    scope: api_key
+    metric: requests_per_minute
+    limit: 30
+    timeFrame: minute
+guidance:
+  - Page through all jobs and company data once every ~6 hours.
+  - Spread requests evenly; do not repeat identical requests within the window.

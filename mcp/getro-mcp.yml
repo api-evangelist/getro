@@ -1,0 +1,66 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+source: https://developers.getro.com/
+description: >-
+  Candidate MCP server for the Getro Network API v2. Getro does not publish an
+  official hosted/remote MCP server. This is a DERIVED candidate tool list mapped
+  one-to-one from the operations documented on the developer portal, so an
+  implementer can stand up an MCP wrapper over the REST API. Auth is a single
+  bearer API key; all read tools page with page/per_page (max 100).
+server:
+  name: getro
+  transport: http
+  url: null
+  auth:
+    type: bearer
+    header: Authorization
+tools:
+  - name: list_job_functions
+    description: Retrieve all job functions.
+    source_operation: 'GET https://api.getro.com/v2/job_functions'
+  - name: list_industry_tags
+    description: Retrieve all industry tags.
+    source_operation: 'GET https://api.getro.com/v2/industry_tags'
+  - name: list_company_locations
+    description: List company locations.
+    source_operation: 'GET https://api.getro.com/v2/locations/companies'
+  - name: list_job_locations
+    description: List job locations.
+    source_operation: 'GET https://api.getro.com/v2/locations/jobs'
+  - name: list_networks
+    description: List all networks accessible to the API key.
+    source_operation: 'GET https://api.getro.com/v2/networks'
+  - name: get_network
+    description: Get a specific network by id.
+    source_operation: 'GET https://api.getro.com/v2/networks/:id'
+  - name: search_companies
+    description: Search companies within a network.
+    source_operation: 'GET https://api.getro.com/v2/networks/:id/companies'
+  - name: get_company
+    description: Get company details within a network.
+    source_operation: 'GET https://api.getro.com/v2/networks/:id/companies/:id'
+  - name: search_jobs
+    description: Search jobs within a network.
+    source_operation: 'GET https://api.getro.com/v2/networks/:id/jobs'
+  - name: search_removed_jobs
+    description: Search removed jobs within a network.
+    source_operation: 'GET https://api.getro.com/v2/networks/:id/jobs/removed'
+  - name: get_job
+    description: Get job details within a network.
+    source_operation: 'GET https://api.getro.com/v2/networks/:network_id/jobs/:id'
+  - name: delete_job
+    description: Delete a job within a network.
+    source_operation: 'DELETE https://api.getro.com/v2/networks/:network_id/jobs/:id'
+  - name: search_contacts
+    description: Search contacts within a network.
+    source_operation: 'GET https://api.getro.com/v2/networks/:id/contacts'
+  - name: get_contact
+    description: Get contact details within a network.
+    source_operation: 'GET https://api.getro.com/v2/networks/:network_id/contacts/:id'
+  - name: import_contacts
+    description: Import contacts.
+    source_operation: 'POST https://api.getro.com/v2/contacts/import'
+  - name: create_contact_note
+    description: Create a note on a contact within a network.
+    source_operation: 'POST https://api.getro.com/v2/networks/:network_id/contacts/notes'

@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.getro.com/
+docs: https://developers.getro.com/
+description: >-
+  HTTP error codes documented for the Getro Network API v2. Getro does not
+  publish an RFC 9457 problem+json envelope or a numeric error-code registry;
+  it returns standard HTTP status codes with a human-readable message. This
+  catalog captures the codes and meanings published on the developer portal.
+format: http-status
+envelope:
+  note: Standard HTTP status code plus a human-readable message body. Not application/problem+json.
+errors:
+  - status: 400
+    title: Bad Request
+    meaning: Your request is invalid.
+  - status: 401
+    title: Unauthorized
+    meaning: Your API key or email is wrong.
+  - status: 403
+    title: Forbidden
+    meaning: The info requested is hidden for certain members.
+  - status: 404
+    title: Not Found
+    meaning: The specified resource could not be found.
+  - status: 422
+    title: Unprocessable / Not Acceptable
+    meaning: You requested a format that isn't JSON.
+  - status: 500
+    title: Internal Server Error
+    meaning: There was a problem with the server. Try again later.
+  - status: 503
+    title: Service Unavailable
+    meaning: Temporarily offline for maintenance.

@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.getro.com/
+description: >-
+  Lifecycle posture for the Getro Network API. The API is at major version 2 and
+  uses URI-path versioning (/v2). Getro does not publish a formal deprecation
+  policy, Sunset/Deprecation header support, an SLA, a public changelog, or a
+  public status page for the API. The developer portal is the single source of
+  truth for the current surface.
+versioning:
+  scheme: uri-path
+  current: v2
+  base_url: https://api.getro.com/v2
+  docs: https://developers.getro.com/
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No formal deprecation policy or Sunset/Deprecation header support documented.
+sla:
+  url: null
+status_page: null
+changelog: null
+deprecated_operations: []

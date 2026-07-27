@@ -1,20 +1,84 @@
 aid: getro
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/getro.png
 name: Getro
-description: Getro is a company surfaced as a portfolio company of techstars and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Getro provides talent and hiring software for venture-capital firms and professional
+  communities. Its flagship product GetroJobs aggregates every open role across a network's
+  companies into a single automatically-updated job board, while GetroConnect adds a
+  relationship layer for warm introductions at scale — People Finder, Company Research,
+  contact outreach and lightweight CRM. Getro exposes a Network API (v2), a read-oriented
+  JSON REST API that lets a network programmatically page through its companies, jobs and
+  contacts. The API is authenticated with a bearer API key, versioned in the URI path, rate
+  limited to 30 requests per minute, and documented on the Getro developer portal. Getro was
+  founded out of the Techstars community and is now part of Findem.
 url: https://raw.githubusercontent.com/api-evangelist/getro/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - techstars
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: has-public-api
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Jobs
+- Talent
+- Hiring
+- Recruiting
+- Job Board
+- Venture Capital
+- Networks
+- CRM
+apis:
+- name: Getro Network API v2
+  description: >-
+    Read-oriented JSON REST API exposing a Getro network's companies, jobs and contacts,
+    plus shared reference collections (job functions, industry tags, locations). Bearer
+    API-key auth, URI-path versioning (/v2), offset pagination (page/per_page, max 100),
+    pipe-delimited multi-value filters, and a 30 requests/minute rate limit. CORS is not
+    supported.
+  humanURL: https://developers.getro.com/
+  baseURL: https://api.getro.com/v2
+  tags:
+  - Jobs
+  - Talent
+  - Networks
+  - Contacts
+  properties:
+  - type: DeveloperPortal
+    url: https://developers.getro.com/
+  - type: Documentation
+    url: https://developers.getro.com/
+  - type: APIReference
+    url: https://developers.getro.com/
+  - type: Authentication
+    url: authentication/getro-authentication.yml
+  - type: RateLimits
+    url: rate-limits/getro-rate-limits.yml
+  - type: Conventions
+    url: conventions/getro-conventions.yml
+  - type: ErrorCatalog
+    url: errors/getro-error-codes.yml
+  - type: Lifecycle
+    url: lifecycle/getro-lifecycle.yml
+  - type: DataModel
+    url: data-model/getro-data-model.yml
+  - type: MCPServer
+    url: mcp/getro-mcp.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +87,46 @@ maintainers:
 common:
 - type: Website
   url: https://getro.com/
+- type: DeveloperPortal
+  url: https://developers.getro.com/
+- type: Documentation
+  url: https://developers.getro.com/
+- type: APIReference
+  url: https://developers.getro.com/
+- type: Support
+  url: https://help.getro.com/
+- type: Blog
+  url: https://www.getro.com/blog
+- type: Pricing
+  url: https://www.getro.com/pricing
+- type: SignUp
+  url: https://www.getro.com/demo
+- type: TermsOfService
+  url: https://www.getro.com/terms
+- type: PrivacyPolicy
+  url: https://www.getro.com/privacy
+- type: GitHubOrganization
+  url: https://github.com/getro
+- type: Authentication
+  url: authentication/getro-authentication.yml
+- type: RateLimits
+  url: rate-limits/getro-rate-limits.yml
+- type: Conventions
+  url: conventions/getro-conventions.yml
+- type: ErrorCatalog
+  url: errors/getro-error-codes.yml
+- type: Lifecycle
+  url: lifecycle/getro-lifecycle.yml
+- type: DataModel
+  url: data-model/getro-data-model.yml
+- type: MCPServer
+  url: mcp/getro-mcp.yml
+- type: LLMsTxt
+  url: llms/getro-llms.txt
+- type: DomainSecurity
+  url: security/getro-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

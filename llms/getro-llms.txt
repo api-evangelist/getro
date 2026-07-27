@@ -1,0 +1,32 @@
+# Getro
+
+> Getro provides talent and hiring software for VC firms and professional communities. Its two products are GetroJobs — one automatically-updated job board aggregating every opportunity across a network's companies — and GetroConnect — a relationship/warm-introduction layer with People Finder, Company Research, contact outreach and CRM. The Getro Network API (v2) is a read-oriented JSON REST API that exposes a network's companies, jobs and contacts, authenticated with a bearer API key.
+
+## API
+
+- [Getro Network API v2](https://developers.getro.com/): REST API for networks, companies, jobs and contacts. Base URL https://api.getro.com/v2. Bearer API-key auth. 30 requests/minute.
+
+## Documentation
+
+- [Developer portal](https://developers.getro.com/): Full API reference, authentication, pagination, filtering and error codes.
+- [Help center](https://help.getro.com/): Product help and support articles.
+- [Blog](https://www.getro.com/blog): Company and product blog.
+- [Pricing](https://www.getro.com/pricing): Getro plans and bundles.
+
+## Conventions
+
+- Authentication: `Authorization: Bearer <API_KEY>` (keys issued in the Getro admin portal; request a developer key via help@getro.com). CORS not supported.
+- Versioning: URI-path, current major version v2.
+- Pagination: `page` + `per_page` (max 100); response carries `items` and `meta.total`.
+- Filtering: multi-value OR filters are pipe-delimited (e.g. `job_functions=Software%20Engineering%7CHealth`).
+- Errors: standard HTTP status codes (400, 401, 403, 404, 422, 500, 503) with a human-readable message; not RFC 9457.
+
+## Repo artifacts
+
+- [Authentication](https://raw.githubusercontent.com/api-evangelist/getro/refs/heads/main/authentication/getro-authentication.yml)
+- [Rate limits](https://raw.githubusercontent.com/api-evangelist/getro/refs/heads/main/rate-limits/getro-rate-limits.yml)
+- [Conventions](https://raw.githubusercontent.com/api-evangelist/getro/refs/heads/main/conventions/getro-conventions.yml)
+- [Error codes](https://raw.githubusercontent.com/api-evangelist/getro/refs/heads/main/errors/getro-error-codes.yml)
+- [Lifecycle](https://raw.githubusercontent.com/api-evangelist/getro/refs/heads/main/lifecycle/getro-lifecycle.yml)
+- [Data model](https://raw.githubusercontent.com/api-evangelist/getro/refs/heads/main/data-model/getro-data-model.yml)
+- [MCP (candidate)](https://raw.githubusercontent.com/api-evangelist/getro/refs/heads/main/mcp/getro-mcp.yml)

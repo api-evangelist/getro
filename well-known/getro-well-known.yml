@@ -1,0 +1,31 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of Getro hosts
+description: >-
+  Probe of the /.well-known/ discovery surface across Getro hosts. No well-known
+  discovery documents (security.txt, openid-configuration, oauth-authorization-server,
+  api-catalog, ai-plugin.json) are published on getro.com, www.getro.com,
+  api.getro.com, or developers.getro.com. Recorded as an honest "none" result.
+hosts:
+  - host: https://getro.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 301
+      - path: /.well-known/openid-configuration
+        status: 301
+      - path: /.well-known/oauth-authorization-server
+        status: 301
+      - path: /.well-known/api-catalog
+        status: 301
+      - path: /.well-known/ai-plugin.json
+        status: 301
+  - host: https://api.getro.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+  - host: https://developers.getro.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 403

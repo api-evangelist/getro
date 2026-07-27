@@ -1,0 +1,51 @@
+generated: '2026-07-19'
+method: searched
+source: https://developers.getro.com/
+docs: https://developers.getro.com/
+description: >-
+  Cross-cutting request/response conventions for the Getro Network API v2,
+  captured from the developer portal. Getro is a read-oriented JSON REST API for
+  a talent/job-board network: bearer API-key auth, URI-path versioning (/v2),
+  offset pagination, pipe-delimited multi-value filters, a flat 30 req/min rate
+  limit, and standard HTTP error codes. There is no documented idempotency key,
+  no OAuth scopes, and no webhook/event surface.
+authentication:
+  style: bearer-api-key
+  header: Authorization
+  format: 'Bearer <API_KEY>'
+  cors: false
+  ref: authentication/getro-authentication.yml
+versioning:
+  scheme: uri-path
+  current: v2
+  base_url: https://api.getro.com/v2
+idempotency:
+  supported: false
+  note: No idempotency key documented; the API is predominantly read-only (GET), with a small number of POST/DELETE write operations.
+pagination:
+  style: offset
+  params:
+    - name: page
+      description: Page number for offsetting results.
+    - name: per_page
+      description: Items per page. Maximum 100.
+      max: 100
+  response_fields:
+    - name: items
+      description: Array of results for the current page.
+    - name: meta.total
+      description: Total count of items across all pages.
+filtering:
+  multi_value:
+    separator: '|'
+    encoded: '%7C'
+    note: Parameters that support OR filtering accept multiple values separated by a pipe, e.g. job_functions=Software%20Engineering%7CHealth.
+rate_limiting:
+  limit: 30
+  window: minute
+  ref: rate-limits/getro-rate-limits.yml
+content_type: application/json
+error_envelope:
+  format: http-status
+  note: Standard HTTP status codes with a message; not RFC 9457 problem+json.
+  ref: errors/getro-error-codes.yml
