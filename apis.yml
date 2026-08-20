@@ -35,6 +35,16 @@ created: '2026-07-17'
 modified: '2026-07-19'
 tags:
 - Company
+- Job
+- Talent
+- Hiring
+- Recruiting
+- Job Board
+- Venture Capital
+- Networks
+- CRM
+tags_raw:
+- Company
 - Jobs
 - Talent
 - Hiring
@@ -54,6 +64,11 @@ apis:
   humanURL: https://developers.getro.com/
   baseURL: https://api.getro.com/v2
   tags:
+  - Job
+  - Talent
+  - Networks
+  - Contacts
+  tags_raw:
   - Jobs
   - Talent
   - Networks
