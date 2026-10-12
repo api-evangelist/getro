@@ -1,0 +1,69 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/getro/integrations
+checked:
+- https://composio.dev/toolkits/getro
+- https://monid.ai/tools/getro
+- https://n8n.io/integrations/getro/
+- https://zapier.com/apps/getro/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: getro
+  url: https://zapier.com/apps/getro/integrations
+  external_url: https://getro.com/
+  partner_tier: BRONZE
+  triggers:
+  - key: deactivated_job
+    label: Deactivated Job
+  - key: new_contacts
+    label: New Contact
+  - key: new_jobs
+    label: New Job
+  actions:
+  - key: import_contacts
+    label: Import Contacts
+  searches:
+  - key: get_deactivated_jobs
+    label: Find Deactivated Jobs
+  - key: get_new_contacts
+    label: Find New Contacts
+  - key: get_new_jobs
+    label: Find New Jobs
+edges:
+- partner_name: Ashby
+  partner: ashby
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/getro/integrations/ashby
+  direction: third-party
+  category: HR Talent & Recruitment
+  partner_url: https://www.ashbyhq.com/
+- partner_name: Microsoft Teams
+  partner: microsoft-teams
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/getro/integrations/microsoft-teams
+  direction: third-party
+  category: Microsoft
+  partner_url: https://products.office.com/en-us/microsoft-teams/group-chat-software
+templates:
+- title: Send channel messages in Slack for new contacts in Getro
+  url: https://zapier.com/apps/getro/integrations/slack/255692508/send-channel-messages-in-slack-for-new-contacts-in-getro
+  apps:
+  - getro
+  - slack
+- title: Create records in Airtable for new contacts in Getro
+  url: https://zapier.com/apps/airtable/integrations/getro/255693889/create-records-in-airtable-for-new-contacts-in-getro
+  apps:
+  - getro
+  - airtable
+template_total: 2
