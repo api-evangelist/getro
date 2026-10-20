@@ -1,4 +1,4 @@
-generated: '2026-10-12'
+generated: '2026-10-20'
 method: searched
 source:
 - https://zapier.com/apps/getro/integrations
@@ -34,28 +34,6 @@ marketplace_apps:
   - key: get_new_jobs
     label: Find New Jobs
 edges:
-- partner_name: Ashby
-  partner: ashby
-  partner_match: name-exact
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/getro/integrations/ashby
-  direction: third-party
-  category: HR Talent & Recruitment
-  partner_url: https://www.ashbyhq.com/
-- partner_name: Microsoft Teams
-  partner: microsoft-teams
-  partner_match: name-exact
-  partner_candidate: null
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/getro/integrations/microsoft-teams
-  direction: third-party
-  category: Microsoft
-  partner_url: https://products.office.com/en-us/microsoft-teams/group-chat-software
 - partner_name: Zapier
   partner: zapier
   partner_match: aggregator
@@ -81,6 +59,30 @@ edges:
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
+- partner_name: Ashby
+  partner: ashby
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/getro/integrations/ashby
+  direction: third-party
+  category: HR Talent & Recruitment
+  partner_url: https://www.ashbyhq.com/
+- partner_name: Microsoft Teams
+  partner: microsoft-teams
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  relationship: ipaas-bridge
+  evidence: https://zapier.com/apps/getro/integrations/microsoft-teams
+  direction: third-party
+  category: Microsoft
+  partner_url: https://products.office.com/en-us/microsoft-teams/group-chat-software
 templates:
 - title: Send channel messages in Slack for new contacts in Getro
   url: https://zapier.com/apps/getro/integrations/slack/255692508/send-channel-messages-in-slack-for-new-contacts-in-getro
