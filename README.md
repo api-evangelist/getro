@@ -64,6 +64,105 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Getro is a company surfaced as a portfolio company of techstars and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+Getro provides talent and hiring software for venture-capital firms and professional communities. Its flagship product GetroJobs aggregates every open role across a network's companies into a single automatically-updated job board, while GetroConnect adds a relationship layer for warm introductions at scale — People Finder, Company Research, contact outreach and lightweight CRM. Getro exposes a Network API (v2), a read-oriented JSON REST API that lets a network programmatically page through its companies, jobs and contacts. The API is authenticated with a bearer API key, versioned in the URI path, rate limited to 30 requests per minute, and documented on the Getro developer portal. Getro was founded out of the Techstars community and is now part of Findem.
 
-Backed by: techstars — https://getro.com/
+**Areas:** Company · Job · Talent · Hiring · Recruiting · Job Board · Venture Capital · Networks · CRM
+
+## Getro on APIs.io
+
+Everything profiled for Getro is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/getro/](https://apis.io/providers/getro/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [Getro Network API v2](https://apis.io/apis/getro/getro-network-api-v2/) — Read-oriented JSON REST API exposing a Getro network's companies, jobs and contacts, plus shared reference collections (job functions, industry tags,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [getro](https://apis.io/servers/getro/getro/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Getro Authentication](https://apis.io/security/getro/getro-authentication/)
+- [Getro Domain Security](https://apis.io/security/getro/getro-domain-security/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Getro Rate Limits](https://apis.io/rate-limits/getro/getro-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://getro.com/)
+- [Documentation](https://developers.getro.com/)
+- [API reference](https://developers.getro.com/)
+- [Pricing](https://www.getro.com/pricing)
+- [Sign up](https://www.getro.com/demo)
+- [Support](https://help.getro.com/)
+- [Blog](https://www.getro.com/blog)
+- [Terms of service](https://www.getro.com/terms)
+- [Privacy policy](https://www.getro.com/privacy)
+- [GitHub](https://github.com/getro)
+
+## API Evangelist rating
+
+**Kin Score 29.1** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 23.7 |
+| Developer ergonomics | 45.2 |
+| Access clarity | 44.7 |
+
+**Agent readiness 7.9** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.6** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/getro/](https://apis.io/providers/getro/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Getro: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/getro/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
